@@ -27,5 +27,8 @@
 </table>
 
 <br>
-
+<% if @posts.size != 10 %>
+<%= paginate @posts %>
+<%= page_entries_info @posts %>
+<% end %>
 <%= link_to 'New Post', new_post_path %>
